@@ -1,0 +1,347 @@
+*, 
+::before, 
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+  --science-blue: #2563eb;
+  --white: #FFFFFF;
+  --grey: #F5F7FA;
+  --biology-green: #16a34a;   
+  --red: #E74C3C;
+  --primary-text: #2C3E50;
+  --secondary-text: #7F8C8D;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: var(--primary-text);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+#quiz-container {
+  background: var(--grey);
+  max-width: 500px;
+  margin: auto;
+  border: 1.4px solid var(--secondary-text);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 30px;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+#question-container,
+#controls,
+#current {
+  padding: 15px;
+}
+.quiz-header {
+  background: var(--science-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 12px 0;
+}
+.quiz-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+}
+#question {
+  font-size: 20px;
+  margin: 10px 0;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 600;
+}
+.btn-container {
+  flex-direction: column;
+  gap: 8px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: -20px;
+}
+.btn {
+  padding: 10px;
+  border-radius: 4px;
+  background: #FFFFFF;
+  border: 1.8px solid #DCE1E7;
+  color: #2C3E50;
+  cursor: pointer;
+  font-family: 'Cairo', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.01);
+}
+
+.btn.disabled {
+  pointer-events: none; 
+  cursor: default;      
+  opacity: 0.85;
+}
+.next-btn, .start-btn {
+    Color: #FFFFFF;
+    border: none;
+    padding: 6px 20px;
+}
+.restart-btn {
+    background-color: var(--science-blue);
+    color: var(--white);
+    border: none;
+    padding: 6px 20px;
+}
+.hide {
+  display: none !important;
+}
+.flex {
+    display: flex;
+}
+#current {
+    font-size: 0.9em;
+    color: var(--primary-text);
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 5px;
+    border-top: 1.5px solid var(--secondary-text);
+}
+.welcome-text {
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto 25px auto;
+  padding-top: 20px;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  line-height: 1.8;
+}
+#welcome-message span {
+   color: var(--biology-green); 
+   font-weight: bold; 
+}
+#welcome-message .en {
+  max-width: 450px;
+}
+  
+.green {
+    background: var(--biology-green);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-color: var(--biology-green);
+    animation: correctGlow 0.6s ease-out;
+}
+.red {
+    background: var(--red);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-color: var(--red);
+    animation: shake 0.3s ease-in-out;
+}
+#score-container {
+  background-color: var(--white);
+  border: 1.4px solid gainsboro;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 2px;
+  padding: 5px;
+  max-width: 422px;
+  border-radius: 4px;
+}
+#score-container h2 {
+  font-size: 2.3rem;
+  padding-top: 5px;
+}
+#score-container h3 {
+  border-bottom: 1.4px solid gainsboro;
+  padding: 5px;
+  font-size: 1.3rem;
+}
+#score-container h4 {
+  font-size: 1.3rem;
+  padding: 5px;
+  margin-top: -5px;
+}
+.restart-view-btn {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+}
+#congMsg {
+  font-weight: bold;
+  padding-top: 5px;
+}
+#greet {
+  color: var(--biology-green);
+}
+
+h1, h2, h3, h4, p, button {
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+}
+
+.footer {
+    text-align: center;
+    padding: 5px 10px;
+    color: var(--grey);
+    margin-top: 185px;
+    font-size: 0.9rem;
+    width: 100%;
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.6);
+  }
+  70% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 14px rgba(46, 204, 113, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes correctGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(46, 204, 113, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(46, 204, 113, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(46, 204, 113, 0.6);
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+#start-btn {
+  animation: pulse 1.8s infinite;
+  background-color: var(--biology-green);
+  color: white;
+  border: none;
+  font-weight: 600;
+  margin-top: -15px;
+}
+#next-btn {
+  background: linear-gradient(135deg, #1E5AA8, #3B82F6);
+  animation: slideUp 0.4s ease-out forwards;
+}
+
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  #quiz-container {
+    width: 80%;
+    max-width: 95%;
+    border-radius: 12px;
+    max-height: min-content;
+  }
+
+  .quiz-header h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  #question {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  #welcome-message h4 {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  #score-container h2 {
+    font-size: 1.6rem;
+  }
+
+  #score-container h3,
+  #score-container h4 {
+    font-size: 1rem;
+  }
+
+  #current {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  #congMsg p {
+    font-size: 1.05rem;
+    text-align: center;
+  }
+
+  footer,
+  .footer {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="seeroh.css">
+
+    <!-- SEO -->
+    <meta name="description" content="اختبر معرفتك بالسيرة النبوية ﷺ من خلال أسئلة تفاعلية ممتعة مع نتائج فورية ونسبة مئوية لدرجتك. مناسب للطلاب ومحبي التعلم الإسلامي.">
+    <meta name="keywords" content="السيرة النبوية, اختبار اسلامي, سيرة النبي, تطبيق تعليمي, اسئلة اسلامية, Quiz Seerah, Islamic Quiz">
+    <meta name="author" content="Ibraheem Abdulwasih">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="اختبار السيرة النبوية ﷺ – اختبر معلوماتك الإسلامية ✨">
+    <meta property="og:description" content="هل أنت مستعد لاختبار معرفتك بحياة خير البشر ﷺ؟ أجب عن الأسئلة واحصل على نتيجتك فورًا مع نسبة مئوية لدرجتك.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="اختبار السيرة النبوية ﷺ – اختبر معلوماتك ✨">
+    <meta name="twitter:description" content="اختبر معرفتك بالسيرة النبوية ﷺ من خلال أسئلة تفاعلية ممتعة واحصل على نتيجتك فورًا.">
+    <meta name="twitter:image" content="">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <title>تطبيق اختبار السيرة النبوية ﷺ</title>
+</head>
+
+<body>
+    <main>
+        <div id="quiz-container">
+            <div class="quiz-header">
+                <h1>اختبار السّيرة النّبوية ﷺ</h1>
+            </div>
+            <div id="welcome-message">
+                <h4 class="welcome-text">مرحبًا بك في اختبار <span>السيرة النبوية ﷺ</span>
+هنا ستختبر معرفتك بحياة <span>خير البشر ﷺ</span>
+هل أنت مستعد لبدء الرّحلة؟"</h4>
+            </div>
+            <div id="question-container" class="hide">
+                <div id="question">Question text</div>
+                <div id="answer-buttons" class="btn-container flex"></div>
+            </div>
+            <div id="controls">
+                <button id="start-btn" class="start-btn btn">ابدأ الاختبار</button>
+                <button id="next-btn" class="next-btn btn hide">السؤال التالي</button>
+            </div>
+            <div id="score-container" class="hide">
+                <h3>درجتك:</h3>
+                <h2 id="score">0 / 40 Correct</h2>
+                <h4 id="percentage">80% Score</h4>
+                <a id="to-english-link" href="index-en.html" class="btn hide" style="margin-top:10px;">Try the quiz in English</a>
+            </div>
+            <div id="congMsg" class="hide">
+                <p><span id="greet">أحسنت! &#127881</span>لقد أحسنت!</p>
+            </div>
+            <div id="restart-control" class="restart-view-btn flex hide">
+                <button id="restart-btn" class="restart-btn btn">إعادة الاختبار</button>
+            </div>
+            <div id="review"></div>
+            <div id="current" class="flex hide">
+                <h4>درجتك: &nbsp;<span id="score-display" class="count">0 / 10</span></h4>
+                <h4>السؤال:&nbsp; <span id="question-number" class="count">1 من 10</span></h4>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>تطبيق اختبار السيرة النبوية ﷺ</p>
+            <p>© 2026 إبراهيم عبد الواسع. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="seeroh.js"></script>
+</body>
+
+</html>
